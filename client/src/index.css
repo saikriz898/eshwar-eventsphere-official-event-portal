@@ -1,0 +1,108 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* --- Design System & Variables --- */
+@theme {
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-secondary: #0ea5e9;
+  --color-accent: #f43f5e;
+  --color-surface: #ffffff;
+  --color-background: #f8fafc;
+
+  --shadow-premium: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+
+  --breakpoint-xs: 480px;
+}
+
+/* --- Base Styles --- */
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  @apply bg-[#f8fafc] text-slate-900 antialiased selection:bg-indigo-100 selection:text-indigo-900;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full border-2 border-slate-50 hover:bg-slate-400 transition-colors;
+}
+
+/* --- Utility Classes --- */
+.glass-effect {
+  @apply bg-white/70 backdrop-blur-md border border-white/20;
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, #4f46e5 0%, #0ea5e9 100%);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-sky-500;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+/* --- Animations --- */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom styles for Leaflet and Calendar */
+.leaflet-container {
+  @apply rounded-xl border border-slate-200 overflow-hidden shadow-sm;
+}
+
+.react-calendar {
+  @apply !border-none !font-sans !bg-white !rounded-2xl !p-4 !shadow-premium;
+}
+
+.react-calendar__tile--active {
+  @apply !bg-indigo-600 !rounded-lg !text-white;
+}
+
+.react-calendar__tile--now {
+  @apply !bg-indigo-50 !rounded-lg !text-indigo-600 font-bold;
+}
+
+/* --- Hide Scrollbar --- */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
