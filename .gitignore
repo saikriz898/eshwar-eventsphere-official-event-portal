@@ -1,0 +1,123 @@
+# =========================
+# Dependencies
+# =========================
+node_modules/
+client/node_modules/
+server/node_modules/
+.pnp
+.pnp.js
+
+# Note: We do NOT ignore lockfiles (package-lock.json, yarn.lock, pnpm-lock.yaml).
+# They should be committed to version control to guarantee deterministic builds.
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# =========================
+# Build & Output
+# =========================
+dist/
+dist-ssr/
+build/
+client/build/
+client/dist/
+server/dist/
+.next/
+out/
+
+# =========================
+# Tooling Caches & Artifacts
+# =========================
+.eslintcache
+.stylelintcache
+.prettiercache
+.tsbuildinfo
+.cache/
+.parcel-cache/
+.vite/
+
+# =========================
+# Coverage & Testing
+# =========================
+coverage/
+.nyc_output/
+cypress/videos/
+cypress/screenshots/
+
+# =========================
+# Runtime Data
+# =========================
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# =========================
+# Database & Redis
+# =========================
+*.sqlite
+*.sqlite3
+*.db
+dump.rdb
+redis-data/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# =========================
+# IDEs & Editor Files
+# =========================
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+*.swn
+.project
+.classpath
+.settings/
+
+# =========================
+# Temporary & Misc
+# =========================
+tmp/
+temp/
+*.tgz
+*.tar.gz
+*.zip
+*.rar
+
+# =========================
+# Deployments & Hosting
+# =========================
+.vercel/
+.render/
+.netlify/
+.serverless/
